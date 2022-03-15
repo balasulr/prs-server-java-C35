@@ -1,7 +1,11 @@
 package com.maxtrain.capstone.request;
 
+import java.util.List;
+
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.maxtrain.capstone.requestline.Requestline;
 import com.maxtrain.capstone.user.User;
 
 @Entity
@@ -30,8 +34,20 @@ public class Request {
 	
 	// Default Constructor
 	public Request() {}
+	
+	@JsonManagedReference
+	@OneToMany(mappedBy="request")
+	private List<Requestline> requestlines;
 
 	// Getters & Setters
+	public List<Requestline> getRequestlines() {
+		return requestlines;
+	}
+
+	public void setRequestlines(List<Requestline> requestlines) {
+		this.requestlines = requestlines;
+	}
+
 	public int getId() {
 		return id;
 	}

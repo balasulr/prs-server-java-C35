@@ -8,6 +8,7 @@ import com.maxtrain.capstone.request.Request;
 
 @Entity
 public class Requestline {
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;

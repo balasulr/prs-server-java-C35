@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/requests")
 public class RequestController {
-
 	@Autowired
 	private RequestRepository reqRepo;
 	
