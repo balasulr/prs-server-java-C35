@@ -2,7 +2,7 @@ package com.maxtrain.capstone.product;
 
 import javax.persistence.*;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+// import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.maxtrain.capstone.vendor.Vendor;
 
 @Entity
@@ -23,7 +23,7 @@ public class Product {
 	private String photoPath;
 	
 	// Foreign Key to Vendor
-	@JsonBackReference
+	// @JsonBackReference
 	@ManyToOne(optional=false)
 	@JoinColumn(name="vendorId")
 	private Vendor vendor;
@@ -91,4 +91,7 @@ public class Product {
 }
 
 // Notes:
+
 // The line below @Entity defines the PartNbr column to be unique
+
+// JsonBackReference

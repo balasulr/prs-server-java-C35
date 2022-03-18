@@ -24,7 +24,7 @@ public class Vendor {
 	private String phone;
 	@Column(length=255,nullable=true)
 	private String email;
-	
+
 	// Default Constructor
 	public Vendor() {}
 
@@ -103,5 +103,7 @@ public class Vendor {
 	
 }
 
-//Notes:
-//The line below @Entity defines the code column to be unique
+// Notes:
+// The line below @Entity defines the code column to be unique
+
+// For Vendor, don't need the JsonManagedReference since don't need to return the list of products when reading the vendors.

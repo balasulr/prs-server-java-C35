@@ -20,11 +20,11 @@ public class Request {
 	@Column(length=80,nullable=true)
 	private String rejectionReason;
 	@Column(length=20,nullable=false)
-	private String deliveryMode; // Default value is "Pickup"
+	private String deliveryMode; // Default value is "Pickup" - Done in the frontend
 	@Column(length=10,nullable=false)
-	private String status; // Default value is New
+	private String status; // Default value is New - Done in the frontend
 	@Column(columnDefinition="decimal(11,2) NOT NULL DEFAULT 0.0")
-	private double total; // Default value is 0
+	private double total; // Default value is 0 - Done in the frontend
 	
 	// Foreign Key to User (See notes below)
 	// @JsonBackReference
@@ -115,4 +115,6 @@ public class Request {
 }
 
 // Notes:
-// ManyToOne means that there are many requests for one user. The optional means that can't allow to be null'
+// ManyToOne means that there are many requests for one user. The optional means that can't allow to be null
+
+// JsonManagedReference means that returns the line items that are described in the request.
